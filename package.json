@@ -1,0 +1,14 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/komandaA/api-gateway.git",
+  "author": "Farrux Mamatxalilov <mfarrukhjon@gmail.com>",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
+  }
+}
