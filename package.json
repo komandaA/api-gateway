@@ -6,8 +6,15 @@
   "author": "Farrux Mamatxalilov <mfarrukhjon@gmail.com>",
   "license": "Apache 2.0",
   "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-graphql": "^0.6.1",
+    "@types/graphql": "^0.13.1",
+    "@types/node-fetch": "^2.1.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "node-fetch": "^2.1.2",
     "ts-node": "^6.1.0",
     "typescript": "^2.9.1"
   }
