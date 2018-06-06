@@ -7,11 +7,9 @@ const posts = {
     type: new GraphQLList(PostType),
     resolve({request}) {
         return fetch('https://jsonplaceholder.typicode.com/posts').then(async resp => {
-            const users = await resp.json();
-
-            return (users);
+            const posts = await resp.json();
+            return (posts);
         });
-
     },
 };
 

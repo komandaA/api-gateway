@@ -1,15 +1,20 @@
 import {
     GraphQLObjectType as ObjectType,
-    GraphQLID as ID,
     GraphQLString as StringType,
-    GraphQLNonNull as NonNull,
 } from 'graphql';
+
+import AddressType from "./AddressType";
 
 const UserType = new ObjectType({
     name: 'User',
     fields: {
-        id: {type: new NonNull(ID)},
+        id: {type: StringType},
+        name: {type: StringType},
+        username: {type: StringType},
         email: {type: StringType},
+        address: {type: AddressType},
+        phone: {type: StringType},
+        website: {type: StringType},
     },
 });
 

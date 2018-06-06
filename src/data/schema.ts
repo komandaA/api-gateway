@@ -4,14 +4,14 @@ import {
 } from 'graphql';
 
 
-import me from './queries/me';
+import users from './queries/users';
 import posts from "./queries/posts";
 
 const schema = new Schema({
     query: new ObjectType({
         name: 'Query',
         fields: {
-            me,
+            users,
             posts
         },
     }),
