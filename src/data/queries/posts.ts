@@ -5,11 +5,16 @@ import {GraphQLList} from "graphql";
 
 const posts = {
     type: new GraphQLList(PostType),
-    resolve({request}) {
-        return fetch('https://jsonplaceholder.typicode.com/posts').then(async resp => {
-            const posts = await resp.json();
-            return (posts);
-        });
+    async resolve({request}) {
+        const resp_posts = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const posts = await resp_posts.json();
+
+        const resp_users = await fetch('https://jsonplaceholder.typicode.com/users');
+        const users = await resp_users.json();
+
+        posts.forEach(post => post.user = users.find(user => user.id === post.userId));
+
+        return (posts);
     },
 };
 
